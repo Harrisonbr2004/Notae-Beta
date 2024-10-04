@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import codigos as cd
+import funções as cd
 #tabela_df = pd.read_excel('media.xlsx')
 
 try:
