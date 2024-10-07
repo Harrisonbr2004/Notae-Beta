@@ -7,7 +7,7 @@ try:
     df_medias = pd.read_excel('médias_salas.xlsx')
 
 except:
-    df_medias = cd.criar_tab_media
+    df_medias = cd.criar_tab_media()
 
 #Looping principal:
 while True:
@@ -86,9 +86,8 @@ while True:
 
     #Salva a tabela em um arquivo .xlsx(Excel)
     with pd.ExcelWriter(f'{sala}.xlsx') as writer:
-      tabela_df.to_excel(writer, sheet_name='Sheet1', index=False)
+      tabela_df.to_excel(writer, sheet_name='Sheet1',
+                          index=False)
 
-    resp3 = int(input("Deseja ver o gráfico de comparação? "))
-    if resp == 1:
-      # Cria um gráfico de barras comparando as médias das salas
-      cd.criar_gráfico(df_medias)
+    # Cria um gráfico de barras comparando as médias das salas
+    cd.criar_gráfico(df_medias)
