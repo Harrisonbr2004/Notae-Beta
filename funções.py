@@ -33,9 +33,11 @@ def rem_aluno(tabela_df):
 
 def criar_tab_media():
   tabela_m = {
-            'SALA':[],
-            'MÉDIA':[]
+            'Sala':[],
+            'Média':[]
               }
+  
+  return pd.DataFrame(tabela_m)
 
 
 def atualizar_tab_media(sala, df_medias, nova_média):
