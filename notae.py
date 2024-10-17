@@ -82,7 +82,7 @@ while True:
                     n_alunos = cd.add_aluno(sala)
                     tabela_df =  pd.concat([tabela_df, n_alunos], ignore_index=True)
 
-                    resp2 = int(input("\nDeseja fazer algo mais? sim = 1, não = 2: "))
+                resp2 = int(input("\nDeseja fazer algo mais? sim = 1, não = 2: "))
                 if resp2 == 2:
                     print("\nOk, até mais!")
                     break
